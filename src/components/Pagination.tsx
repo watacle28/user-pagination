@@ -59,6 +59,7 @@ const Pagination: React.FC<PaginationProps> = ({
       <div className="go-to-input">
         <span className="go-to-text">Go to page</span>
         <input
+          title='go-to'
           type="text"
           value={inputPage}
           onChange={handleInputChange}

@@ -16,8 +16,7 @@ const UserList: React.FC = () => {
     useEffect(() => {
       const fetchUsers = async () => {
         setLoading(true);
-        const response = await getUsersPage(num);
-        const data = await response.json();
+        const data = await getUsersPage(num);
         if (data.users.length < USERS_PER_PAGE) {
           setHasMoreUsers(false);
         } else {
