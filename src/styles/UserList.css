@@ -1,0 +1,67 @@
+/* UserList.css */
+
+@import './variables.css';
+
+h1 {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: var(--padding-base);
+}
+
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 5px solid var(--border-color);
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.user-list-container {
+  margin: auto;
+  width: 80%;
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding-base);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-family);
+  margin-top: var(--padding-base);
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  text-align: left;
+  padding: var(--padding-base);
+}
+
+th {
+  background: var(--primary-color);
+  color: var(--accent-color);
+}
+
+td {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+td:nth-child(odd) {
+  background: #e3f2fd;
+}
