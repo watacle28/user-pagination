@@ -52,7 +52,7 @@
 
 .pagination .go-to-input .go-to-text {
   margin-right: 5px;
-  color: var(--text-color);
+  color: white;
   font-weight: bold;
 }
 
