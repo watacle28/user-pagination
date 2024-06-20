@@ -1,6 +1,7 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { User } from "../types/User";
 import { USERS_PER_PAGE } from '../constants';
+import { getUsersPage } from "../api/api";
 import Pagination from './Pagination';
 
 import "../styles/UserList.css";
@@ -15,7 +16,7 @@ const UserList: React.FC = () => {
     useEffect(() => {
       const fetchUsers = async () => {
         setLoading(true);
-        const response = await fetch(`https://give-me-users-forever.vercel.app/api/users/${num}/next`);
+        const response = await getUsersPage(num);
         const data = await response.json();
         if (data.users.length < USERS_PER_PAGE) {
           setHasMoreUsers(false);
